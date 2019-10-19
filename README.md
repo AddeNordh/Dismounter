@@ -8,5 +8,3 @@ A simple and minimalistic addon to dismount you everytime you get that annoying 
 # Author
 
 > Liljezus - Ten Storms
-
-Minimalistic addon to dismount your character when you get the error saying "You are mounted"
