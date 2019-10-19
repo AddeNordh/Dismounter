@@ -1,8 +1,4 @@
 
-
-local flightDestination = nil;
-
-
 local frame = CreateFrame("frame", 'Dismmount Frame');
 frame:RegisterEvent("UI_ERROR_MESSAGE") ;
 frame:SetScript("OnEvent", function(self, event, addon, msg) 
@@ -18,15 +14,14 @@ end)
 
 TaxiFrame:HookScript('OnShow', function()
     for i=1, NumTaxiNodes() do
-        print(TaxiNodeName(i), TaxiNodeGetType(i));
         local frame = _G["TaxiButton"..i];
         frame:HookScript('OnMouseUp', function()
             GetNumRoutes(i);
             TakeTaxiNode(i);
-            -- takes some time before the player actually has dismounted so just try to take the flight path every 1/4s for 2s
+            -- it takes some time before the player actually has dismounted so just try to take the flight path every 1/4s for 2s
             for t=0,8 do
                 C_Timer.After(t/4,function() 
-                    if UnitOnTaxi("player")==false then
+                    if (UnitOnTaxi("player") == false) then
                         TakeTaxiNode(i) 
                     end;
                 end)
