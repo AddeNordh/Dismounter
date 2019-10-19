@@ -1,0 +1,8 @@
+## Title: |cff00ccffDismounter|r
+## Interface: 11302
+## Notes: Dismount when when casting spells etc
+## Author: AddeNordh
+## Version: 1
+## DefaultState: enabled
+
+Dismounter.lua
