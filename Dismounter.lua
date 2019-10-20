@@ -58,6 +58,7 @@ frame:SetScript("OnEvent", function(self, event, arg1, msg)
             local name = UnitBuff("player", i);
             if (name and has_value(shapeShifts, name)) then
               CancelUnitBuff("player", i);
+              break;
             end
         end
     end
